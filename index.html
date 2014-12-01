@@ -1,0 +1,176 @@
+<html>
+
+
+<head>
+
+<title>Simple Image Slider - JS & CSS</title>
+	
+
+<style type="text/css">
+/* http://github.com/saumya04 */
+
+#sliderFrame {position:relative;width:700px;margin: 0 auto 40px;}
+        
+#slider {
+    width:700px;height:306px;/* Make it the same size as your images */
+	background:#fff url(loading.gif) no-repeat 50% 50%;
+	position:relative;
+	margin:0 auto;/*make the image slider center-aligned */
+    box-shadow: 0px 1px 5px #999999;
+}
+#slider img {
+	position:absolute;
+	border:none;
+	display:none;
+}
+
+/* the link style (if an image is wrapped in a link) */
+#slider a.imgLink {
+	z-index:2;
+	display:none;position:absolute;
+	top:0px;left:0px;border:0;padding:0;margin:0;
+	width:100%;height:100%;
+}
+
+/* Caption styles */
+div.mc-caption-bg, div.mc-caption-bg2 {
+	position:absolute;
+	width:100%;
+	height:auto;
+	padding:0;
+	left:0px; 
+	bottom:15px;
+	z-index:3;
+	overflow:hidden;
+	font-size: 0;
+}
+div.mc-caption-bg {
+	background-color:black;
+}
+div.mc-caption {
+	font: bold 14px/20px Arial;
+	color:#EEE;
+	z-index:4;
+	padding:10px 0;
+	text-align:center;
+}
+div.mc-caption a {
+	color:#FB0;
+}
+div.mc-caption a:hover {
+	color:#DA0;
+}
+
+
+/* ------ built-in navigation bullets wrapper ------*/
+div.navBulletsWrapper  {
+	top:320px; left:280px; /* Its position is relative to the #slider */
+	width:150px;
+	background:none;
+	padding-left:20px;
+	position:relative;
+	z-index:5;
+	cursor:pointer;
+}
+
+/* each bullet */
+div.navBulletsWrapper div 
+{
+    width:11px; height:11px;
+    background:transparent url(images/bullet.png) no-repeat 0 0;
+    float:left;overflow:hidden;vertical-align:middle;cursor:pointer;
+    margin-right:11px;/* distance between each bullet*/
+    _position:relative;/*IE6 hack*/
+}
+
+div.navBulletsWrapper div.active {background-position:0 -11px;}
+
+
+/* --------- Others ------- */
+#slider 
+{
+	transform: translate3d(0,0,0);
+    -ms-transform:translate3d(0,0,0);
+    -moz-transform:translate3d(0,0,0);
+    -o-transform:translate3d(0,0,0);
+}
+
+body {
+	background-image: url('images/1-bg.png');
+	background-size: cover;
+	font-family: 'Maven Pro', sans-serif;
+}
+
+div {
+	font-family: 'Maven Pro', sans-serif !important;
+	font-weight: 500 !important;
+}
+
+#sliderFrame {
+	margin-top: 5%;
+}
+
+h1 {
+	margin-top: 30px;
+	font-weight: 700 !important;
+}
+
+h2 {
+	font-weight: 400 !important;
+	font-size: 20px;
+	color: #c2c2c2;
+}
+
+img {
+	opacity: 0.3;
+	transition: all 0.3s ease;
+}
+
+img:hover {
+	opacity: 0.8;
+}
+
+</style>
+
+<!-- Importing "Open Sans font" from Google Fonts -->
+<link href='http://fonts.googleapis.com/css?family=Maven+Pro:400,900,700,500' rel='stylesheet' type='text/css'>
+<script src="js/js-image-slider.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+
+<center>
+<h1>Simple JavaScript & CSS Slider</h1>
+</center>
+
+<div id="sliderFrame">
+<div id="slider">
+<a href="#"><img src="images/banners/image-slider-1.jpg" alt="#htmlcaption1" /></a>
+<a href="#"><img src="images/banners/image-slider-2.jpg" alt="Multiple Animations!" /></a>
+<a href="#"><img src="images/banners/image-slider-3.jpg" alt="Pure Javascript & CSS. No jQuery. No flash." /></a>
+<a href="#"><img src="images/banners/image-slider-4.jpg" alt="#htmlcaption2" /></a>
+<a href="#"><img src="images/banners/image-slider-5.jpg" alt="Mouse-Over to Pause"/></a>
+</div>
+<div id="htmlcaption1" style="display: none;">
+Image Slider by: <a href="http://github.com/saumya04" target="_blank">github.com/saumya04</a>
+</div>
+<div id="htmlcaption2" style="display: none;">
+<a href="http://www.w3schools.com/css/" target="_blank">CSS</a>&nbsp;&&nbsp;<a href="http://www.w3schools.com/js/default.asp" target="_blank">JavaScript</a> Rocks.
+</div>
+</div>
+
+<center>
+
+<br /><br />
+<h2>Find me on:</h2>
+
+<a href="http://github.com/saumya04"><img src="images/github_icon.png"></a>&nbsp;
+<a href="http://fb.com/saumya.rastogi04"><img src="images/fb_icon.png"></a>&nbsp;
+<a href="http://github.com/rastogi_saumya"><img src="images/twitter_icon.png"></a>
+</center>
+
+
+</body>
+
+</html>
